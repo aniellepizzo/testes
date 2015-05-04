@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_cordova-plugin-whitelist" default="compile.module.cordova-plugin-whitelist">
+  <dirname property="module.cordova-plugin-whitelist.basedir" file="${ant.file.module_cordova-plugin-whitelist}"/>
+  
+  <property name="module.jdk.home.cordova-plugin-whitelist" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.cordova-plugin-whitelist" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.cordova-plugin-whitelist" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.cordova-plugin-whitelist" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="cordova-plugin-whitelist.output.dir" value="${module.cordova-plugin-whitelist.basedir}/../../../out/production/cordova-plugin-whitelist"/>
+  <property name="cordova-plugin-whitelist.testoutput.dir" value="${module.cordova-plugin-whitelist.basedir}/../../../out/test/cordova-plugin-whitelist"/>
+  
+  <path id="cordova-plugin-whitelist.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="cordova-plugin-whitelist.module.production.classpath">
+    <path refid="${module.jdk.classpath.cordova-plugin-whitelist}"/>
+    <pathelement location="${cordovalib.output.dir}"/>
+  </path>
+  
+  <path id="cordova-plugin-whitelist.runtime.production.module.classpath">
+    <pathelement location="${cordova-plugin-whitelist.output.dir}"/>
+    <path refid="cordovalib.runtime.production.module.classpath"/>
+  </path>
+  
+  <path id="cordova-plugin-whitelist.module.classpath">
+    <path refid="${module.jdk.classpath.cordova-plugin-whitelist}"/>
+    <pathelement location="${cordova-plugin-whitelist.output.dir}"/>
+    <pathelement location="${cordovalib.testoutput.dir}"/>
+    <pathelement location="${cordovalib.output.dir}"/>
+  </path>
+  
+  <path id="cordova-plugin-whitelist.runtime.module.classpath">
+    <pathelement location="${cordova-plugin-whitelist.testoutput.dir}"/>
+    <pathelement location="${cordova-plugin-whitelist.output.dir}"/>
+    <path refid="cordovalib.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.cordova-plugin-whitelist">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.cordova-plugin-whitelist">
+    <patternset refid="excluded.from.module.cordova-plugin-whitelist"/>
+  </patternset>
+  
+  <path id="cordova-plugin-whitelist.module.sourcepath">
+    <dirset dir="${module.cordova-plugin-whitelist.basedir}">
+      <include name="android"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.cordova-plugin-whitelist" depends="compile.module.cordova-plugin-whitelist.production,compile.module.cordova-plugin-whitelist.tests" description="Compile module cordova-plugin-whitelist"/>
+  
+  <target name="compile.module.cordova-plugin-whitelist.production" depends="register.custom.compilers,compile.module.cordovalib" description="Compile module cordova-plugin-whitelist; production classes">
+    <mkdir dir="${cordova-plugin-whitelist.output.dir}"/>
+    <javac2 destdir="${cordova-plugin-whitelist.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.cordova-plugin-whitelist}/javac">
+      <compilerarg line="${compiler.args.cordova-plugin-whitelist}"/>
+      <bootclasspath refid="cordova-plugin-whitelist.module.bootclasspath"/>
+      <classpath refid="cordova-plugin-whitelist.module.production.classpath"/>
+      <src refid="cordova-plugin-whitelist.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.cordova-plugin-whitelist"/>
+    </javac2>
+    
+    <copy todir="${cordova-plugin-whitelist.output.dir}">
+      <fileset dir="${module.cordova-plugin-whitelist.basedir}/android">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.cordova-plugin-whitelist.tests" depends="register.custom.compilers,compile.module.cordova-plugin-whitelist.production" description="compile module cordova-plugin-whitelist; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.cordova-plugin-whitelist" description="cleanup module">
+    <delete dir="${cordova-plugin-whitelist.output.dir}"/>
+    <delete dir="${cordova-plugin-whitelist.testoutput.dir}"/>
+  </target>
+</project>

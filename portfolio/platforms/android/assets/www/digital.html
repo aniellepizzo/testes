@@ -1,0 +1,29 @@
+<div ui-content-for="title">
+  <span>Digital</span>
+</div>
+
+<div class="scrollable">  
+  <div class="scrollable-content">
+    <div class="shadow"></div>
+    <div class='section port-galery'>
+    
+    	<div class="row galeria">
+            <div class="col-lg-3 col-md-3 col-sm-6 item" ng-repeat="itens in galery">
+                <a href="{{itens.modal}}" class="descr-item" >
+                    <p>{{itens.descr}}</p>
+                    <i class="fa fa-search pull-right"></i>
+                </a>
+                <img ng-src="{{itens.images[0].thumb}}" class="img-responsive"/>
+            </div>
+        </div>
+
+    </div>		
+    </div>
+
+  </div>
+</div>
+
+<div ui-content-for="modals">
+  <div id="modal1" ng-include="'modal1.html'"></div>
+  <div ng-include="'modal2.html'"></div>
+</div>
