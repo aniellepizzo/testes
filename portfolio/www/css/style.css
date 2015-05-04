@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+h1, h2, h3, h4, h5, h6{
+	font-family: segoe;
+	color: #444;
+}
+
 .app{
 	background:url(../images/bg-quadradinho.jpg);
 }
@@ -46,6 +51,7 @@
 .navbar-absolute-bottom{
 	background: #2f2f2f;
 	border-top: 1px solid #000;
+	min-height: 20px;
 }
 
 /******************************************/
@@ -87,7 +93,6 @@
 /******************************************/
 .section.home{
 	height: 100%;
-	margin-top: -45px;
 }
 
 .section.home h1{
@@ -160,6 +165,89 @@
 }
 .galeria .item .descr-item i{
 	font-size: 20px;
+}
+
+/******************************************/
+/**************POP - PORTFOLIO*************/
+/******************************************/
+.has-navbar-top .app-body.pop-port{
+	padding-top: 52px;
+	background: #f2f2f2;
+}
+
+.has-navbar-top .app-body.pop-port .section{
+	background: #f2f2f2;
+}
+
+.has-navbar-top .app-body.pop-port .shadow{
+	background: rgba(242, 242, 242, 0.7);
+}
+
+
+.navbar-absolute-top.close-pop{
+	background: transparent;
+	min-height: 42px !important;
+	border-bottom: none;
+}
+
+.navbar-absolute-top.close-pop .btn-group{
+	min-height: 42px !important;
+}
+
+.navbar-absolute-top.close-pop .btn-group > .btn{
+	min-height: 42px;
+	line-height: 42px;
+}
+
+
+.close-pop .btn-close{
+	font-family: segoe;
+	font-size: 25px;
+	color: #444;
+	text-decoration: none;
+}
+.close-pop .btn-close:hover,
+.close-pop .btn-close:focus{
+	color: #BA7AFF;
+}
+
+.close-pop .title-pop-port{
+	left: 0;
+}
+.close-pop .title-pop-port h1{
+	margin: 0;
+	border-bottom: 1px dashed #333;
+	padding-bottom: 5px;
+}
+
+#carousel{
+	width: 95%;
+	margin: 0 auto;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+	background: #333;
+}
+
+#carousel .item img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.has-navbar-top .app-body.pop-port .section .descricao{
+	width: 95%;
+	margin: 10px auto;
+	border-top: 1px dashed #444;
+	border-bottom: 1px dashed #444;
+}
+
+.has-navbar-top .app-body.pop-port .section .descricao p{
+	padding: 10px;
+	margin: 0;
+}
+
+.has-navbar-top .app-body.pop-port .section .descricao p a{
+	text-decoration: underline;
+	color: #333;
 }
 
 

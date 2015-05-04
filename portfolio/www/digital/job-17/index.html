@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ani - Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="../../css/mobile-angular-ui-hover.css" />
+    <link rel="stylesheet" href="../../css/mobile-angular-ui-base.css" />
+    <link rel="stylesheet" href="../../css/mobile-angular-ui-desktop.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link href="../../css/owl.carousel.css" rel="stylesheet">
+    <link href="../../css/owl.theme.css" rel="stylesheet">
+    
+
+	<script type="text/javascript" src="cordova.js"></script>
+    <script src="../../js/angular.min.js"></script>
+    <script src="../../js/angular-route.min.js"></script>
+
+    <script src="../../js/mobile-angular-ui.js"></script>
+    <!-- Required to use $swipe, $drag and Translate services -->
+    <script src="../../js/mobile-angular-ui.gestures.js"></script>
+
+    <script src="../../js/demo.js"></script>
+  </head>
+
+  <body ng-app="AniPortfolio" ng-controller="MainController">
+  
+    <div class="navbar navbar-app navbar-absolute-top close-pop">
+        <div class="btn-group pull-right">
+            <div class="btn btn-navbar">
+                <a class="btn-close" onClick="javascript:history.go(-1);">X</a>
+            </div>
+        </div>  
+        
+        <div class="navbar-brand navbar-brand-right title-pop-port">
+          <h1>Capital Informação</h1>
+        </div>
+    </div> 
+      <div class="app-body pop-port" ng-class="{loading: loading}">
+        <div ng-show="loading" class="app-content-loading">
+          <i class="fa fa-spinner fa-spin loading-spinner"></i>
+        </div>
+        <div class="app-content">
+            <div class="shadow"></div>
+            <div class="scrollable">  
+                <div class="scrollable-content">
+                    <div class="section">
+                    
+                        <div class="row">
+                            <div id="carousel" class="owl-carousel">
+                                <div class="item"><img src="img-01.jpg"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                        	<div class="descricao">
+                            	<p><strong>Descrição:</strong> desenvolvimento de layout.</p>
+                            </div>
+                        </div>
+                    
+            
+                    </div><!-- /section -->
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div><!-- ~ .app -->
+      
+
+    <script src="../../js/jquery-1.9.1.min.js"></script> 
+    <script src="../../js/owl.carousel.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $("#carousel").owlCarousel({
+
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+    </script>
+
+</body>

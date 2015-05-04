@@ -2,7 +2,7 @@
 // Here is how to define your module 
 // has dependent on mobile-angular-ui
 // 
-var app = angular.module('MobileAngularUiExamples', [
+var app = angular.module('AniPortfolio', [
   'ngRoute',
   'mobile-angular-ui',
   
@@ -217,6 +217,165 @@ app.controller('MainController', function($rootScope, $scope){
   $scope.bottomReached = function() {
     alert('Congrats you scrolled to the end of the list!');
   }
+  
+  // 
+  // Galery Digital
+  // 
+  $scope.galery = [
+    { descr: 'Site - Fronteiras',
+	  modal: 'digital/job-01/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-01/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Site - Otex',
+	  modal: 'digital/job-02/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-02/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Hotsite - Frutap Eu Vou',
+	  modal: 'digital/job-03/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-03/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Hotsite - Soul de Biarritz',
+	  modal: 'digital/job-04/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-04/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Hotsite - Obelisco Domus',
+	  modal: 'digital/job-05/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-05/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Site - Intelecto digital',
+	  modal: 'digital/job-06/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-06/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Site - Mix Pisos',
+	  modal: 'digital/job-07/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-07/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Site - Objetiva Imóveis',
+	  modal: 'digital/job-08/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-08/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Site - Sitio Migala',
+	  modal: 'digital/job-10/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-10/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Newsletter - Carnaval WE´5',
+	  modal: 'digital/job-11/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-11/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Newsletter - Dia das mães WE´5',
+	  modal: 'digital/job-12/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-12/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Newsletter - Natal WE´5',
+	  modal: 'digital/job-13/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-13/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Newsletter - Dia das mulheres WE´5',
+	  modal: 'digital/job-14/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-14/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Newsletter - Férias WE´5',
+	  modal: 'digital/job-15/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-15/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Newsletter - Mákkina eventos',
+	  modal: 'digital/job-16/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-16/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Layout - Capital informação',
+	  modal: 'digital/job-17/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-17/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+    { descr: 'Layout - Companhia da informação',
+	  modal: 'digital/job-18/index.html',
+	  images:[
+		  {
+			thumb: 'digital/job-18/thumb-job.jpg'			  
+		  }
+	  ]
+	
+	},
+  ];
 
   // 
   // Right Sidebar
